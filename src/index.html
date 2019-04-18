@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Text Tools</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Text Tools" />
-    <meta name="theme-color" content="#222"/>
-    <link rel="manifest" href="/manifest.json">
+  <title>Text Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Text Tools" />
+  <meta name="theme-color" content="#222"/>
+  <link rel="manifest" href="/manifest.json">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115818-73"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115818-73');
+  </script>
 </head>
 <body>
   <header>
@@ -24,12 +33,12 @@
       </section>
     </form>
   </section>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js')
-  });
-}
-</script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js')
+    });
+  }
+  </script>
 </body>
 </html>
