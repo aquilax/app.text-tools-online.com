@@ -34,6 +34,7 @@
     var operations = document.querySelectorAll("#operations p");
     var help = document.querySelector("#help");
     var up = document.querySelector("#up");
+    var shareText = document.querySelector("#share");
 
     convertors.addEventListener("change", function() {
       var selectedId = convertors.options[convertors.selectedIndex].value;
@@ -52,6 +53,7 @@
       from.value = to.value;
       to.value = temp;
     });
+
     start.addEventListener("click", function(event) {
       event.preventDefault();
       var text = from.value;
@@ -61,6 +63,19 @@
         window.gtag("convert", convertor);
       }
     });
+
+    if (navigator.share) {
+      shareText.addEventListener("click", function(event) {
+        event.preventDefault();
+        navigator.share({
+          title: "Text Tools",
+          text: to.value,
+          url: window.location.href
+        });
+      });
+    } else {
+      shareText.style.display = "none";
+    }
 
     fillOperators(convertors, Array.prototype.slice.call(operations));
 
