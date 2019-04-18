@@ -6,7 +6,6 @@
   <meta name="description" content="Text Tools" />
   <meta name="theme-color" content="#eee"/>
   <link rel="manifest" href="/manifest.json">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115818-73"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,12 +29,15 @@
     }
     textarea {
       box-sizing: border-box;
-      padding: 1em;
+      padding: .6em;
       height: 16em;
       width: 100%;
     }
     p:target {
 	    background: #ffc;
+    }
+    button, select, input {
+      padding: .4em;
     }
   </style>
 </head>
@@ -86,11 +88,13 @@
             <option value="strikeout">Strikeout</option>
             <option value="shuffle">Shuffle</option>
           </select>
-          <a href="#" id="help">?</a>
+          <a href="#" id="help" title="Help">?</a>
           <input id="param1" style="display: none"/>
           <input id="param2" style="display: none"/>
+          |
           <button type="button" id="start">Start</button>
-          <button type="button" id="up" title="Move result up">^</button>
+          |
+          <button type="button" id="up" title="Swap Fields">↕</button>
           <button type="button" id="share" title="Share">🔗</button>
         </section>
         <hr/>

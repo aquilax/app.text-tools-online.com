@@ -82,6 +82,11 @@
     createWorker(function(m) {
       return (to.value = m.data.t);
     });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const parsedUrl = new URL(window.location);
+      from.value = parsedUrl.searchParams.get("text");
+    });
   };
   init();
 })(window, document);

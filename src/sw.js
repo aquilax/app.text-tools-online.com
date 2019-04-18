@@ -39,11 +39,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "2a002f39af825aef9346b847421fb2ec"
+    "revision": "74cbcc0474d04e9226f762f15e1adb86"
   },
   {
     "url": "js/app.js",
-    "revision": "49210c89d4e218b4a3582a7d59c00572"
+    "revision": "5be2c8665d18067fdc81ed6740485a5e"
   },
   {
     "url": "js/worker.js",
@@ -51,7 +51,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.json",
-    "revision": "d8d0bdbb7c545040d85f7bcc96eda6e0"
+    "revision": "649b7448d1e0de3af134f60081fd4719"
   },
   {
     "url": "/?utm_source=homescreen",

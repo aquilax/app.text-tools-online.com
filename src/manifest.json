@@ -22,5 +22,13 @@
   "background_color": "#eee",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#eee"
+  "theme_color": "#eee",
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "text": "text"
+    }
+  }
 }
