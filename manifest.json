@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/?source=pwa",
+  "start_url": "/?utm_source=homescreen",
   "background_color": "#222",
   "display": "standalone",
   "scope": "/",
