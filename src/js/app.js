@@ -66,11 +66,17 @@
 
     if (navigator.share) {
       shareText.addEventListener("click", function(event) {
+        var url = document.location.href;
+        var canonicalElement = document.querySelector("link[rel=canonical]");
+        if (canonicalElement !== null) {
+          url = canonicalElement.href;
+        }
+
         event.preventDefault();
         navigator.share({
           title: "Text Tools",
           text: to.value,
-          url: window.location.href
+          url: url
         });
       });
     } else {
