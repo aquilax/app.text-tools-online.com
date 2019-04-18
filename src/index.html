@@ -2,10 +2,32 @@
 <html lang="en">
 <head>
     <title>Text Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Text Tools" />
 </head>
 <body>
-    <textarea></textarea>
-    <button>Start</button>
-    <textarea></textarea>
+  <header>
+    <h1>Text tools</h1>
+  </header>
+  <section>
+    <form>
+      <section>
+        <label for="from">Text to process:</label>
+        <textarea id="from"></textarea>
+      </section>
+      <button type="button">Start</button>
+      <section>
+        <label for="to">Result:</label>
+        <textarea id="to"></textarea>
+      </section>
+    </form>
+  </section>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js')
+  });
+}
+</script>
 </body>
 </html>

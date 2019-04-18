@@ -1,1 +1,26 @@
-{}
+{
+  "short_name": "Text Tools",
+  "name": "Text Tools",
+  "icons": [
+    {
+      "src": "/images/icon_128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/images/icons_256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/images/icons_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#222",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#222"
+}
