@@ -38,8 +38,12 @@ self.__precacheManifest = [
     "revision": "a0dbb4187adabda7cbb224accb3fc6fa"
   },
   {
+    "url": "images/og.png",
+    "revision": "8080036cab6c15be8d9c21cdfbc3a5d0"
+  },
+  {
     "url": "index.html",
-    "revision": "4896fe8e91aac1b48cded54432d7c967"
+    "revision": "9210c30364c4076212d2be7cf87790d2"
   },
   {
     "url": "js/app.js",
