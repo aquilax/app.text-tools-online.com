@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -55,7 +55,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.json",
-    "revision": "649b7448d1e0de3af134f60081fd4719"
+    "revision": "b8c753ab64b6cdc6c465ca1cd473059b"
   },
   {
     "url": "/?utm_source=homescreen",
