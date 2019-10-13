@@ -312,6 +312,9 @@
         i--;
       }
       return a.join("\n");
+    },
+    remove_duplicate: function(text) {
+      return Array.from(new Set(text.split("\n"))).join("\n");
     }
   };
 
