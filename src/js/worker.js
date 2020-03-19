@@ -315,6 +315,14 @@
     },
     remove_duplicate: function(text) {
       return Array.from(new Set(text.split("\n"))).join("\n");
+    },
+    remove_empty: function(text) {
+      return text
+        .split("\n")
+        .filter(function(l) {
+          return l.trim();
+        })
+        .join("\n");
     }
   };
 
