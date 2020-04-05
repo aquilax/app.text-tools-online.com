@@ -1,0 +1,13 @@
+{
+  "name": "app.text-tools-online.com",
+  "version": "1.0.0",
+  "repository": "https://github.com/aquilax/app.text-tools-online.com",
+  "author": "aquilax <aquilax@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "workbox generateSW workbox-config.js"
+  },
+  "devDependencies": {
+    "workbox-cli": "^5.1.2"
+  }
+}
