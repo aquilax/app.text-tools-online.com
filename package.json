@@ -9,5 +9,6 @@
   },
   "devDependencies": {
     "workbox-cli": "^5.1.2"
-  }
+  },
+  "dependencies": {}
 }
