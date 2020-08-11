@@ -1,21 +1,21 @@
-(function(window, document) {
+(function (window, document) {
   var worker;
 
-  var createWorker = function(onMessage) {
+  var createWorker = function (onMessage) {
     worker = new Worker("/js/worker.js");
     return worker.addEventListener("message", onMessage, false);
   };
 
-  var convert = function(convertor, args) {
+  var convert = function (convertor, args) {
     return worker.postMessage({
       cmd: convertor,
-      args: args
+      args: args,
     });
   };
 
-  var fillOperators = function(convertors, operations) {
+  var fillOperators = function (convertors, operations) {
     convertors.innerHtml = operations
-      .map(function(operation) {
+      .map(function (operation) {
         var name = operation.querySelector("b");
         var id = operation.id;
         return '<option value="' + id + '">' + name + "</option>";
@@ -24,7 +24,7 @@
     return convertors.dispatchEvent(new Event("change"));
   };
 
-  var init = function() {
+  var init = function () {
     var from = document.querySelector("#from");
     var to = document.querySelector("#to");
     var convertors = document.querySelector("#convertors");
@@ -36,7 +36,7 @@
     var up = document.querySelector("#up");
     var shareText = document.querySelector("#share");
 
-    convertors.addEventListener("change", function() {
+    convertors.addEventListener("change", function () {
       var selectedId = convertors.options[convertors.selectedIndex].value;
       var config = document.querySelector("#" + selectedId);
       param1.style.display = config.dataset.param1 ? "initial" : "none";
@@ -47,14 +47,14 @@
       help.setAttribute("href", "#" + selectedId);
     });
 
-    up.addEventListener("click", function(event) {
+    up.addEventListener("click", function (event) {
       event.preventDefault();
       var temp = from.value;
       from.value = to.value;
       to.value = temp;
     });
 
-    start.addEventListener("click", function(event) {
+    start.addEventListener("click", function (event) {
       event.preventDefault();
       var text = from.value;
       var convertor = convertors.value;
@@ -65,7 +65,7 @@
     });
 
     if (navigator.share) {
-      shareText.addEventListener("click", function(event) {
+      shareText.addEventListener("click", function (event) {
         var url = document.location.href;
         var canonicalElement = document.querySelector("link[rel=canonical]");
         if (canonicalElement !== null) {
@@ -76,7 +76,7 @@
         navigator.share({
           title: "Text Tools",
           text: to.value,
-          url: url
+          url: url,
         });
       });
     } else {
@@ -85,7 +85,7 @@
 
     fillOperators(convertors, Array.prototype.slice.call(operations));
 
-    createWorker(function(m) {
+    createWorker(function (m) {
       return (to.value = m.data.t);
     });
 
